@@ -23,7 +23,7 @@ const changeHandler=(e)=>{
     let formData=new FormData();
     formData.append("product",image);
 
-    await fetch("https://startling-faloodeh-fd04b5.netlify.app/upload",{
+    await fetch("https://e-backend-jkn8.onrender.com/upload",{
       method:'POST',
       headers:{Accept:'Application/json',
 
@@ -34,7 +34,7 @@ const changeHandler=(e)=>{
       product.image=responseData.image_url
     }
     console.log(product)
-    await fetch('https://startling-faloodeh-fd04b5.netlify.app/addproduct',{
+    await fetch('https://e-backend-jkn8.onrender.com/addproduct',{
       method:"POST",
       headers:{
         Accept:'application/json',
