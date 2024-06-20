@@ -5,7 +5,7 @@ import cross_icon from '../../assets/cross_icon.png';
 function Listproduct() {
   const[allproduct,setallproduct]=useState([])
   const fechInfo=async()=>{
-    await fetch('https://e-backend-jkn8.onrender.com/getallproducts')
+    await fetch('https://startling-faloodeh-fd04b5.netlify.app/getallproducts')
     .then((resp)=>resp.json())
     .then((data)=>{setallproduct(data)})
   }
@@ -14,7 +14,7 @@ function Listproduct() {
   },[])
 
   const remove_product=async(id)=>{
-    await fetch('https://e-backend-jkn8.onrender.com/removeproduct',{
+    await fetch('https://startling-faloodeh-fd04b5.netlify.app/removeproduct',{
       method:'POST',
       headers:{
         Accept:"Application/json",
